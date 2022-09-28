@@ -1,0 +1,17 @@
+--- a/dialog.tcl
++++ b/dialog.tcl
+@@ -184,13 +184,7 @@
+ proc Dialog::add { path args } {
+     variable _widget
+ 
+-    if {[string equal $::tcl_platform(platform) "windows"]
+-	&& $::tk_version >= 8.4} {
+-	set width -11
+-    } else {
+-	set width 8
+-    }
+-    set cmd [list ButtonBox::add $path.bbox -width $width \
++    set cmd [list ButtonBox::add $path.bbox \
+ 		 -command [list Dialog::enddialog $path $_widget($path,nbut)]]
+     set res [eval $cmd $args]
+     incr _widget($path,nbut)

@@ -1,0 +1,24 @@
+Source: bwidget
+Section: libs
+Priority: optional
+Maintainer: Debian Tcl/Tk Packagers <pkg-tcltk-devel@lists.alioth.debian.org>
+Uploaders: Sergei Golovan <sgolovan@debian.org>
+Build-Depends: debhelper (>= 10.0.0)
+Build-Depends-Indep: tcl-dev
+Standards-Version: 4.4.1
+Homepage: https://core.tcl.tk/bwidget/home
+Vcs-Browser: https://salsa.debian.org/tcltk-team/bwidget
+Vcs-Git: https://salsa.debian.org/tcltk-team/bwidget.git
+
+Package: bwidget
+Architecture: all
+Depends: ${wish:Depends}, ${misc:Depends}
+Description: Extension widgets for Tcl/Tk
+ The BWidget toolkit is a high-level widget set for Tcl/Tk. It contains
+ widgets such as progress bars, 3D separators, various manager widgets
+ for top levels, frames, paned or scrolled windows, button boxes,
+ notebooks or dialogs as well as composite widgets such as combo boxes,
+ spin boxes and tree widgets.
+ .
+ The BWidget toolkit is completely written in Tcl so no compiled
+ extension library is required.

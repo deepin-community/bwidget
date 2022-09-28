@@ -1,0 +1,210 @@
+bwidget (1.9.14-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump standards version to 4.4.1.
+
+ -- Sergei Golovan <sgolovan@debian.org>  Wed, 04 Dec 2019 10:59:31 +0300
+
+bwidget (1.9.13-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Refresh patches.
+
+ -- Sergei Golovan <sgolovan@debian.org>  Wed, 12 Dec 2018 09:32:29 +0300
+
+bwidget (1.9.12-2) unstable; urgency=medium
+
+  * Add the debian/watch uscan file.
+  * Add the new Salsa VCS headers to debian/control.
+  * Change the upstream homepage.
+
+ -- Sergei Golovan <sgolovan@debian.org>  Fri, 23 Mar 2018 12:29:45 +0300
+
+bwidget (1.9.12-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bumped standards version to 4.1.3.
+
+ -- Sergei Golovan <sgolovan@debian.org>  Wed, 10 Jan 2018 21:48:33 +0300
+
+bwidget (1.9.11-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bumped debhelper compatibility level to 10.
+  * Bumped standards version to 4.1.1.
+
+ -- Sergei Golovan <sgolovan@debian.org>  Thu, 26 Oct 2017 11:50:12 +0300
+
+bwidget (1.9.10-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Sergei Golovan <sgolovan@debian.org>  Wed, 09 Mar 2016 09:54:54 +0300
+
+bwidget (1.9.9-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bumped standards version to 3.9.6.
+
+ -- Sergei Golovan <sgolovan@debian.org>  Thu, 22 Oct 2015 11:47:58 +0300
+
+bwidget (1.9.8-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bumped standards version to 3.9.5.
+
+ -- Sergei Golovan <sgolovan@debian.org>  Thu, 11 Sep 2014 09:19:54 +0400
+
+bwidget (1.9.7-1) unstable; urgency=low
+
+  * New upstream release.
+  * Removed unnecessary build dependency on quilt.
+  * Use debian/install files list instead of copying files in debian/rules.
+
+ -- Sergei Golovan <sgolovan@debian.org>  Mon, 23 Sep 2013 10:20:06 +0400
+
+bwidget (1.9.6-2) unstable; urgency=low
+
+  * Build for unstable.
+  * Fixed the original tarball download URL.
+  * Bumped standards version to 3.9.4.
+
+ -- Sergei Golovan <sgolovan@debian.org>  Sun, 05 May 2013 11:33:58 +0400
+
+bwidget (1.9.6-1) experimental; urgency=low
+
+  * New upstream release.
+  * Switched to 3.0 (quilt) source package format.
+  * Increased debhelper compatibility level to 8 and use much shorter
+    debian/rules script.
+  * Bumped standards version to 3.9.3.
+
+ -- Sergei Golovan <sgolovan@debian.org>  Sat, 28 Jul 2012 19:43:53 +0400
+
+bwidget (1.9.5-1) unstable; urgency=low
+
+  * New upstream release.
+  * Bumped standards version to 3.9.2.
+
+ -- Sergei Golovan <sgolovan@debian.org>  Tue, 09 Aug 2011 23:17:09 +0400
+
+bwidget (1.9.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * Bumped standards version to 3.9.0.
+
+ -- Sergei Golovan <sgolovan@debian.org>  Sat, 17 Jul 2010 10:15:03 +0400
+
+bwidget (1.9.0-2) unstable; urgency=low
+
+  * Removed Anselm Lingnau from uploaders list (closes: #540857).
+  * Removed README.Debian with obsolete info.
+  * Added README.source with explanation on how to get patched sources using
+    the original tarball and the series of patches in debian/patches directory.
+  * Added ${misc:Depends} bariable to debian/control file.
+  * Bumped standards version to 3.8.3.
+
+ -- Sergei Golovan <sgolovan@debian.org>  Sun, 10 Jan 2010 02:58:49 +0300
+
+bwidget (1.9.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * Bumped standards version to 3.8.2.
+
+ -- Sergei Golovan <sgolovan@debian.org>  Sat, 25 Jul 2009 02:20:07 +0400
+
+bwidget (1.8.0-3) unstable; urgency=low
+
+  * Fixed clean target to work with debhelper 7.0 (made dh_clean the last
+    command, so debhelper logs are removed now).
+  * Protected quilt invocation in debian/rules to make it possible to convert
+    bwidget source package to 3.0 (quilt) format (closes: #484906).
+  * Changed section in debian/doc-base to Programming.
+
+ -- Sergei Golovan <sgolovan@debian.org>  Sun, 08 Jun 2008 10:08:37 +0400
+
+bwidget (1.8.0-2) unstable; urgency=low
+
+  * New maintainer Debian Tcl/Tk Packagers
+    <pkg-tcltk-devel@lists.alioth.debian.org>.
+  
+  [ Sergei Golovan ]
+  * Moved all tcl scripts to /usr/share/tcltk to make the package compliant
+    to Debian Tcl/Tk policy (closes: #434394).
+  * Replaced Build-Depends-Indep by Build-Depends, because clean target
+    requires Build-Depends.
+  * Removed -width parameter from code, which adds button to a dialog
+    window. Otherwise buttons with text longer than 8 characters look
+    awful.
+  * Use quilt for patch management.
+  * Register HTML docs in doc-base.
+  * Bumped standards version to 3.7.3.
+  * Bumped debhelper compatibility level to 5.
+
+  [ Francesco Paolo Lovergine ]
+  * Added Homepage field in debian/control
+
+ -- Sergei Golovan <sgolovan@debian.org>  Fri, 11 Jan 2008 18:15:24 +0300
+
+bwidget (1.8.0-1) unstable; urgency=low
+
+  * New upstream release (closes: #392929).
+
+ -- Anselm Lingnau <lingnau@debian.org>  Mon, 20 Aug 2007 13:18:57 +0200
+
+bwidget (1.7.0-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Anselm Lingnau <lingnau@debian.org>  Mon, 22 Dec 2003 02:31:03 +0100
+
+bwidget (1.6.0-2) unstable; urgency=low
+
+  * This is the `reasonable changelog' release (thanks to Brian Nelson
+    <pyro@debian.org>).
+  * Build dependency on debhelper now added (closes: #70184).
+  * Spelling errors fixed in the description. I think the errors are
+    debatable but it's probably better to keep the peace (closes: #124472).
+  * Documentation is up to date as per upstream package; package
+    installation directory has same version number as package
+    (closes: #147059).
+  * It *is* the current upstream version of the package, so for the time
+    being there should be nothing to complain about (closes: #159971).
+  * Images go to /usr/share/bwidget1.6.0 since they are
+    architecture-independent. This makes Lintian happy.
+  
+ -- Anselm Lingnau <anselm@strathspey.org>  Tue, 27 May 2003 08:27:09 +0200
+
+bwidget (1.6.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * Upstream was changed to Tcl license.
+  * Closes: #159971, #124472, #147059, #70184.
+
+ -- Anselm Lingnau <anselm@strathspey.org>  Tue, 27 May 2003 01:15:33 +0200
+
+bwidget (1.3.1.20010713-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Anselm Lingnau <lingnau@debian.org>  Wed, 18 Jul 2001 16:40:49 +0200
+
+bwidget (1.2.1-2) unstable; urgency=low
+
+  * Fix various lintian bugs.
+
+ -- Anselm Lingnau <lingnau@debian.org>  Thu, 17 Aug 2000 17:46:49 +0200
+
+bwidget (1.2.1-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Anselm Lingnau <lingnau@debian.org>  Thu, 29 Jul 1999 11:37:22 +0200
+
+bwidget (1.1-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Anselm Lingnau <lingnau@debian.org>  Fri, 30 Apr 1999 10:44:20 +0200
+
+

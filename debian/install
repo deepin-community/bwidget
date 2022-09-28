@@ -1,0 +1,4 @@
+*.tcl	/usr/share/tcltk/bwidget1.9.13
+images	/usr/share/tcltk/bwidget1.9.13
+lang	/usr/share/tcltk/bwidget1.9.13
+BWman/*	/usr/share/doc/bwidget/html

@@ -1,0 +1,28 @@
+#!/usr/bin/make -f
+
+v = 1.9.13
+
+%:
+	dh $@
+
+override_dh_compress:
+	dh_compress -X.tcl -X.xbm
+
+override_dh_installdeb:
+	tcltk-depends
+	dh_installdeb
+
+override_dh_fixperms:
+	chmod a-x debian/bwidget/usr/share/tcltk/bwidget$(v)/*.tcl
+	chmod a-x debian/bwidget/usr/share/tcltk/bwidget$(v)/lang/*
+	dh_fixperms
+
+override_dh_installchangelogs:
+	dh_installchangelogs ChangeLog
+
+get-orig-source:
+	wget -O bwidget_$(v).orig.tar.gz \
+		http://prdownloads.sourceforge.net/tcllib/bwidget-$(v).tar.gz
+
+.PHONY: override_dh_compress override_dh_installdeb override_dh_fixperms \
+	override_dh_installchangelogs get-orig-source
